@@ -1,0 +1,42 @@
+package mits.Student_portal_Backend;
+import jakarta.persistence.Entity;// for entityt
+import jakarta.persistence.GeneratedValue;//Genarated value for easy cretion of id values automatically
+import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Table;
+import jakarta.persistence.Id;// for id 
+
+@Entity//poss class converted to entity class 
+//@Table(name="stu") // by using this we can change the table name 
+public class Student {
+	   @Id
+	   @GeneratedValue(strategy = GenerationType.AUTO)// the genration of id values automatically ( which is not duplicated)
+	   private Long id;
+       String name ;
+       String email;
+       String password;
+	   public Long getId() {
+		   return id;
+	   }
+	   public void setId(Long id) {
+		   this.id = id;
+	   }
+	   public String getName() {
+		   return name;
+	   }
+	   public void setName(String name) {
+		   this.name = name;
+	   }
+	   public String getEmail() {
+		   return email;
+	   }
+	   public void setEmail(String email) {
+		   this.email = email;
+	   }
+	   public String getPassword() {
+		   return password;
+	   }
+	   public void setPassword(String password) {
+		   this.password = password;
+	   }
+            
+}
